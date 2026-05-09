@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Earlybird Woodworking</title>
 
-<link
-  rel="icon"
-  type="image/png"
-  href="https://i.ibb.co/VYb9jRQ8/Untitled-design-2.png"
-/>
-
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://i.ibb.co/VYb9jRQ8/Untitled-design-2.png"
+    />
+    
     <link
       href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;family=Montserrat:wght@400;500;600&amp;display=swap"
       rel="stylesheet"
@@ -401,6 +401,47 @@
         display: block;
       }
 
+      /* About Page */
+      .about-page {
+        display: none;
+      }
+
+      .about-page.active {
+        display: block;
+      }
+
+      .about-container {
+        max-width: 950px;
+        margin: 0 auto;
+        background-color: #302c2c;
+        padding: 3rem;
+        border-radius: 12px;
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .about-photo {
+        width: 100%;
+        aspect-ratio: 1 / 1.15;
+        object-fit: cover;
+        border-radius: 12px;
+        background-color: #202020;
+      }
+
+      .about-text h2 {
+        font-family: "PT Serif", serif;
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .about-text p {
+        font-size: 1rem;
+        line-height: 1.9;
+        color: #f0f0de;
+      }
+
       .contact-container {
         max-width: 600px;
         margin: 0 auto;
@@ -550,6 +591,12 @@
         .contact-container {
           padding: 2rem 1.5rem;
         }
+
+        .about-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+          padding: 2rem;
+        }
       }
     </style>
     <style>
@@ -588,6 +635,7 @@
         </div>
         <ul class="nav-links">
           <li><a onclick="showPage('home')">Home</a></li>
+          <li><a onclick="showPage('about')">About Me</a></li>
           <li><a onclick="showPage('contact')">Commission</a></li>
         </ul>
       </nav>
@@ -822,6 +870,45 @@
             </button>
           </div>
         </div>
+        
+        <!-- About Page -->
+        <div id="about-page" class="about-page">
+          <button class="back-button" onclick="showPage('home')">
+            ← Back
+          </button>
+
+          <div class="about-container">
+            <img
+              class="about-photo"
+              src="https://placehold.co/600x700/202020/FFFFE7?text=Your+Photo"
+              alt="Portrait"
+            />
+
+            <div class="about-text">
+              <h2>About Me</h2>
+
+              <p>
+                My name is Early Walter, I am a 17 year old and was born and
+                raised in Boise, Idaho. I have always had a passion for
+                woodworking, art, design, and engineering.
+
+                <br /><br />
+
+                Woods beauty has always fascinated me, when I look at the grain
+                I like to visualize and imagine the tree's life, and the story
+                the growth rings tell. Pairing it with the rigid lines cut by
+                the saws is visually interesting and reveals the story in a
+                specific way.
+
+                <br /><br />
+
+                I hope you like my pieces, reach out to me with any questions or
+                requests, thank you :)
+              </p>
+            </div>
+          </div>
+        </div>
+
         <!-- Contact Page -->
         <div id="contact-page" class="contact-page">
           <button class="back-button" onclick="showPage('home')">← Back</button>
@@ -919,13 +1006,34 @@
         document
           .getElementById("home-page")
           .classList.toggle("active", pageName === "home");
+
         document
           .getElementById("contact-page")
           .classList.toggle("active", pageName === "contact");
 
+        document
+          .getElementById("about-page")
+          .classList.toggle("active", pageName === "about");
+
         if (pageName === "contact") {
           document.getElementById("commission-form").reset();
-          document.getElementById("success-message").classList.remove("show");
+          document
+            .getElementById("success-message")
+            .classList.remove("show");
+
+          setTimeout(() => {
+            document
+              .getElementById("contact-page")
+              .scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 50);
+        }
+
+        if (pageName === "about") {
+          setTimeout(() => {
+            document
+              .getElementById("about-page")
+              .scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 50);
         }
       }
 
