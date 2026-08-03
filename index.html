@@ -958,7 +958,7 @@
               <h2>About Me</h2>
 
               <p>
-                My name is Early Walter, I am a 18 year old, born and
+                My name is Early Walter, I am a 17 year old, born and
                 raised in Boise, Idaho. I have always had a passion for
                 woodworking, art, design, and engineering.
 
@@ -979,7 +979,13 @@
         </div>
 
         
-<div id="store-page" class="store-page"><button class="back-button" onclick="showPage('home')">← Back</button><div class="about-container" style="display:block"><h2>Store</h2><p>Handcrafted items. Photos coming soon.</p><div class="store-grid"><div class="product-card"><div class="placeholder">Keepsake Box</div><h3>Walnut Keepsake Box</h3><button class="cta-button">Coming Soon</button></div><div class="product-card"><div class="placeholder">Cutting Boards</div><h3>Cutting Boards</h3><button class="cta-button">Coming Soon</button></div><div class="product-card"><div class="placeholder">Earrings</div><h3>Wooden Earrings</h3><button class="cta-button">Coming Soon</button></div></div></div></div>
+<div id="store-page" class="store-page"><button class="back-button" onclick="showPage('home')">← Back</button><div class="about-container" style="display:block"><h2>Store</h2><p>Handcrafted items. Photos coming soon.</p><div class="store-grid"><div class="product-card"><div class="placeholder">Keepsake Box</div><h3>Walnut Keepsake Box</h3><button class="cta-button">Coming Soon</button></div><div class="product-card"><h3>Cutting Boards</h3>
+<div><img id="cbImg" src="https://i.ibb.co/S4dkyVFx/20260803-161756.jpg" style="max-width:100%;border-radius:8px;">
+<div style="margin:8px 0;"><button onclick="prevCB()">◀</button> <button onclick="nextCB()">▶</button></div>
+<p id="cbInfo"><strong>1. Bookmatched figured maple serving tray</strong><br>11×11<br>$150</p></div><button class="cta-button">Coming Soon</button></div><div class="product-card"><h3>Wooden Earrings</h3>
+<div><img id="earImg" src="https://via.placeholder.com/500x500?text=Earring+1" style="max-width:100%;border-radius:8px;">
+<div style="margin:8px 0;"><button onclick="prevEar()">◀</button> <button onclick="nextEar()">▶</button></div>
+<p id="earInfo"><strong>1. Placeholder Earrings</strong><br>Dimensions<br>$00</p></div><button class="cta-button">Coming Soon</button></div></div></div></div>
 <!-- Contact Page -->
         <div id="contact-page" class="contact-page">
           <button class="back-button" onclick="showPage('home')">← Back</button>
@@ -1310,5 +1316,17 @@
         }
       })();
     </script>
-  </body>
+  
+<script>
+const cb=[["https://i.ibb.co/S4dkyVFx/20260803-161756.jpg","1. Bookmatched figured maple serving tray<br>11×11<br>$150"],
+["https://i.ibb.co/nNVTVBdV/20260803-161810.jpg","2. Bookmatched figured maple serving tray<br>11×11<br>$150"],
+["https://i.ibb.co/9mRHd6b9/20260803-161719.jpg","3. Bookmatched figured maple serving tray<br>11×11<br>$150"],
+["https://i.ibb.co/TDqyc2TP/20260803-161829.jpg","4. Bookmatched figured maple serving tray<br>11×11<br>$150"],
+["https://i.ibb.co/0pvh8hYv/20260803-161736.jpg","5. Bookmatched figured maple serving tray<br>11×11<br>$150"]];
+let c=0;function showCB(){cbImg.src=cb[c][0];cbInfo.innerHTML="<strong>"+cb[c][1]+"</strong>";}
+function nextCB(){c=(c+1)%cb.length;showCB()} function prevCB(){c=(c+cb.length-1)%cb.length;showCB()}
+const ear=[["https://via.placeholder.com/500x500?text=Earring+1","1. Placeholder Earrings<br>Dimensions<br>$00"],["https://via.placeholder.com/500x500?text=Earring+2","2. Placeholder Earrings<br>Dimensions<br>$00"]];
+let e=0;function showEar(){earImg.src=ear[e][0];earInfo.innerHTML="<strong>"+ear[e][1]+"</strong>";}
+function nextEar(){e=(e+1)%ear.length;showEar()} function prevEar(){e=(e+ear.length-1)%ear.length;showEar()}
+</script></body>
 </html>
