@@ -673,8 +673,7 @@
     <script
       src="https://cdn.tailwindcss.com/3.4.17"
       type="text/javascript"
-    >showCB();
-</script>
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"
       type="text/javascript"
@@ -1329,5 +1328,5 @@ function nextCB(){c=(c+1)%cb.length;showCB()} function prevCB(){c=(c+cb.length-1
 const ear=[["https://via.placeholder.com/500x500?text=Earring+1","1. Placeholder Earrings<br>Dimensions<br>$00"],["https://via.placeholder.com/500x500?text=Earring+2","2. Placeholder Earrings<br>Dimensions<br>$00"]];
 let e=0;function showEar(){earImg.src=ear[e][0];earInfo.innerHTML="<strong>"+ear[e][1]+"</strong>";}
 function nextEar(){e=(e+1)%ear.length;showEar()} function prevEar(){e=(e+ear.length-1)%ear.length;showEar()}
-</script></body>
+</script><script>showCB();showEar();</script></body>
 </html>
