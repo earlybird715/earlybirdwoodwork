@@ -208,7 +208,7 @@
 
       .gallery-section h2 {
         font-family: "PT Serif", serif;
-        font-size: 4rem;
+        font-size: 2rem;
         margin-bottom: 2rem;
         text-align: center;
         letter-spacing: 0.5px;
@@ -673,31 +673,11 @@
     <script
       src="https://cdn.tailwindcss.com/3.4.17"
       type="text/javascript"
-    >
-function highlightContact(){
- const f=document.querySelector('footer');
- if(!f)return;
- f.style.transition='all .3s';
- f.style.padding='40px';
- f.style.boxShadow='0 0 20px rgba(180,140,80,.6)';
- document.getElementById('contact-page').scrollIntoView({behavior:'smooth'});
- setTimeout(()=>{document.addEventListener('click',()=>{f.style.padding='';f.style.boxShadow='';},{once:true});},100);
-}
-</script>
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"
       type="text/javascript"
-    >
-function highlightContact(){
- const f=document.querySelector('footer');
- if(!f)return;
- f.style.transition='all .3s';
- f.style.padding='40px';
- f.style.boxShadow='0 0 20px rgba(180,140,80,.6)';
- document.getElementById('contact-page').scrollIntoView({behavior:'smooth'});
- setTimeout(()=>{document.addEventListener('click',()=>{f.style.padding='';f.style.boxShadow='';},{once:true});},100);
-}
-</script>
+    ></script>
   </head>
   <body>
     <div class="app-wrapper">
@@ -722,7 +702,7 @@ function highlightContact(){
         <ul class="nav-links">
           <li><a onclick="showPage('home')">Home</a></li>
           <li><a onclick="showPage('about')">About Me</a></li>
-          <li><a onclick="highlightContact()">Commission</a></li>
+          <li><a onclick="showPage('contact')">Commission</a></li>
           <li><a onclick="showPage('store')">Store</a></li>
           <li><a href="#footer-contact">Contact</a></li>
         </ul>
@@ -734,12 +714,7 @@ function highlightContact(){
             <h1 id="hero-title">Custom, Quality, Handcrafted Furniture</h1>
           </div>
           <div class="gallery-section">
-            <div style="text-align:center;margin:36px 0;line-height:1.8;">
-<p>Right now I have a selection of bespoke cutting boards, earrings, and jewelry boxes.</p>
-<p> <span>To see photos and inquire about purchasing, </span><a href="#" onclick="showPage('store');return false;" style="color:inherit;text-decoration:underline;font-weight:600;white-space:nowrap;">click here</a>.</p>
-<hr style="margin:32px auto 0;max-width:220px;border:none;border-top:1px solid rgba(255,255,255,.2);">
-</div>
-<h2>Sold Commissions</h2>
+            <h2>Featured Works</h2>
             <div class="gallery-container">
               <div class="carousel" id="standard-carousel-0">
                 <div class="carousel-images">
@@ -781,7 +756,6 @@ function highlightContact(){
                   <button class="carousel-button" onclick="prevCarousel(0)">
                     ←
                   </button>
-
 
                   <div style="text-align: center">
                     <div
@@ -959,7 +933,7 @@ function highlightContact(){
               until I get the perfect finish. The utmost care and
               detail goes into everything that I create
             </p>
-            <button class="cta-button" onclick="highlightContact()">
+            <button class="cta-button" onclick="showPage('contact')">
               Request a Commission
             </button>
           </div>
@@ -1298,17 +1272,7 @@ function highlightContact(){
       }
 
       updateUI();
-    
-function highlightContact(){
- const f=document.querySelector('footer');
- if(!f)return;
- f.style.transition='all .3s';
- f.style.padding='40px';
- f.style.boxShadow='0 0 20px rgba(180,140,80,.6)';
- document.getElementById('contact-page').scrollIntoView({behavior:'smooth'});
- setTimeout(()=>{document.addEventListener('click',()=>{f.style.padding='';f.style.boxShadow='';},{once:true});},100);
-}
-</script>
+    </script>
     <script>
       (function () {
         function c() {
@@ -1343,16 +1307,6 @@ function highlightContact(){
           }
         }
       })();
-    
-function highlightContact(){
- const f=document.querySelector('footer');
- if(!f)return;
- f.style.transition='all .3s';
- f.style.padding='40px';
- f.style.boxShadow='0 0 20px rgba(180,140,80,.6)';
- document.getElementById('contact-page').scrollIntoView({behavior:'smooth'});
- setTimeout(()=>{document.addEventListener('click',()=>{f.style.padding='';f.style.boxShadow='';},{once:true});},100);
-}
-</script>
+    </script>
   </body>
 </html>
